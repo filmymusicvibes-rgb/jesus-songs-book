@@ -1,0 +1,5 @@
+{
+  "name": "Jesus Songs Book",
+  "description": "A modern, elegant spiritual songbook featuring glassmorphism and neumorphism, with A-Z filtering, search, and AI-powered suggestions.",
+  "requestFramePermissions": ["microphone"]
+}

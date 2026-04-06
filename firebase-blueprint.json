@@ -1,0 +1,33 @@
+{
+  "entities": {
+    "Song": {
+      "title": "Song",
+      "description": "A Christian song with lyrics and metadata.",
+      "type": "object",
+      "properties": {
+        "title": { "type": "string", "description": "The title of the song." },
+        "lyrics": { "type": "string", "description": "The full lyrics of the song." },
+        "category": { "type": "string", "enum": ["Worship", "Prayer", "Youth", "Classical"], "description": "The category of the song." },
+        "letter": { "type": "string", "description": "The starting letter of the song title." },
+        "audioUrl": { "type": "string", "format": "uri", "description": "Optional URL to an audio file." },
+        "createdAt": { "type": "string", "format": "date-time", "description": "The time the song was added." }
+      },
+      "required": ["title", "lyrics", "category", "letter"]
+    },
+    "UserFavorite": {
+      "title": "UserFavorite",
+      "description": "A song favorited by a user.",
+      "type": "object",
+      "properties": {
+        "userId": { "type": "string", "description": "The UID of the user." },
+        "songId": { "type": "string", "description": "The ID of the song." },
+        "createdAt": { "type": "string", "format": "date-time", "description": "The time the song was favorited." }
+      },
+      "required": ["userId", "songId"]
+    }
+  },
+  "firestore": {
+    "/songs": { "schema": "Song", "description": "Collection of all songs." },
+    "/users/{userId}/favorites": { "schema": "UserFavorite", "description": "User-specific favorites." }
+  }
+}

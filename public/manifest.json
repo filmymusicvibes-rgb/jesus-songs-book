@@ -1,0 +1,14 @@
+{
+  "name": "Derna Daidna Maranji - A Kenkennanji",
+  "short_name": "Songs Book",
+  "description": "Spiritual Songs Collection by Vishwa Vani",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ecfdf5",
+  "theme_color": "#059669",
+  "orientation": "portrait",
+  "icons": [
+    { "src": "/vishwavani-logo.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/vishwavani-logo.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}

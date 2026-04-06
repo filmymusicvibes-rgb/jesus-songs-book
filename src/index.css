@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer utilities {
+  .glass {
+    @apply bg-white/30 backdrop-blur-md border border-white/20 shadow-xl;
+  }
+  
+  .glass-dark {
+    @apply bg-black/20 backdrop-blur-md border border-white/10 shadow-xl;
+  }
+
+  .neumorphic {
+    @apply bg-white shadow-[8px_8px_16px_#d1d9e6,-8px_-8px_16px_#ffffff];
+  }
+
+  .neumorphic-inset {
+    @apply bg-white shadow-[inset_8px_8px_16px_#d1d9e6,inset_-8px_-8px_16px_#ffffff];
+  }
+
+  .neumorphic-button {
+    @apply bg-white shadow-[4px_4px_8px_#d1d9e6,-4px_-4px_8px_#ffffff] active:shadow-[inset_4px_4px_8px_#d1d9e6,inset_-4px_-4px_8px_#ffffff] transition-all duration-200;
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-sky-600 to-amber-500;
+  }
+}
+
+body {
+  @apply bg-[#f0f4f8] text-gray-800 min-h-screen font-sans;
+  background-image: 
+    radial-gradient(at 0% 0%, hsla(200, 100%, 90%, 1) 0, transparent 50%),
+    radial-gradient(at 50% 0%, hsla(45, 100%, 95%, 1) 0, transparent 50%),
+    radial-gradient(at 100% 0%, hsla(210, 100%, 90%, 1) 0, transparent 50%);
+}
